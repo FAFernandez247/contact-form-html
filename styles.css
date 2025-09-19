@@ -1,0 +1,179 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; /* stacked on mobile by default */
+}
+
+.left, .right {
+  flex: 1;
+}
+
+/* Left Side */
+.left {
+  position: relative;
+  background: url("assets/bg-image.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  color: #fff;
+}
+
+.left .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.left .content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  text-align: left;
+  margin-left: 0; /* center content on mobile */
+}
+
+.left .logo {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.left h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.left p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.left small {
+  display: block;
+  opacity: 0.7;
+  font-size: 0.75rem;
+}
+
+.highlight {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* Right Side */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-container {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.form-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-container .subtitle {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 1.2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+form label {
+  font-size: 0.85rem;
+}
+
+form input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #666;
+  font-size: 0.9rem;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239,68,68,0.4);
+}
+
+form button {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #dc2626;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #aaa;
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left .content {
+    margin-left: 2rem;
+  }
+
+  .left h2 {
+    font-size: 2rem;
+  }
+
+  .left p {
+    font-size: 1rem;
+  }
+
+  .left .logo {
+    height: 100px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .left .content {
+    margin-left: 4rem;
+  }
+
+  .form-container {
+    max-width: 450px;
+  }
+}
