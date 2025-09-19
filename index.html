@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Form</title>
+  <title>Contact Form | The LOOK (Asia) Inc.</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aktiv+Grotesk:wght@300;400;500;700&display=swap">
 </head>
 <body>
   <div class="container">
     <!-- LEFT SIDE -->
     <div class="left">
-      <div class="overlay"></div>
       <div class="content">
         <img src="assets/logo.png" alt="logo" class="logo" />
         <h2>
-          Thank you for visiting The <span class="highlight">LOOK</span> at our exhibit
+          Thank you for visiting The <span class="highlight">LOOK</span> (Asia) Inc. at our exhibit!
         </h2>
         <p>
-          Please take a moment to fill out your contact details below. This helps us stay connected and share how we create inspiring brand environments across Asia and beyond with <span class="highlight">LOOK</span>.
+          Please take a moment to fill out your contact details below. This helps us stay connected and share how we create inspiring brand environments across Asia and beyond.
         </p>
         <small>
           Your information will be kept confidential and used solely for professional engagement.
@@ -31,21 +32,39 @@
         <h3>Contact Details</h3>
         <p class="subtitle">We'd love to connect with you</p>
 
-        <form>
-          <label>Contact Name</label>
-          <input type="text" placeholder="Enter Contact name" required />
-
-          <label>Company Name</label>
-          <input type="text" placeholder="Enter your company name" required />
-
-          <label>Contact Email</label>
-          <input type="email" placeholder="Enter your email address" required />
-
-          <label>Contact Number</label>
-          <input type="tel" placeholder="Enter your phone number" required />
+        <form id="contactForm">
+          <div class="input-group">
+            <label>Contact Name</label>
+            <input type="text" placeholder="Enter Contact name" required />
+            <i class="fas fa-user input-icon"></i>
+          </div>
+          
+          <div class="input-group">
+            <label>Company Name</label>
+            <input type="text" placeholder="Enter your company name" required />
+            <i class="fas fa-building input-icon"></i>
+          </div>
+          
+          <div class="input-group">
+            <label>Contact Email</label>
+            <input type="email" placeholder="Enter your email address" required />
+            <i class="fas fa-envelope input-icon"></i>
+          </div>
+          
+          <div class="input-group">
+            <label>Contact Number</label>
+            <input type="tel" placeholder="Enter your phone number" required />
+            <i class="fas fa-phone input-icon"></i>
+          </div>
 
           <button type="submit">Submit Contact Information</button>
         </form>
+
+        <div class="success-message" id="successMessage">
+          <i class="fas fa-check-circle"></i>
+          <h3>Thank You!</h3>
+          <p>Your information has been submitted successfully.</p>
+        </div>
 
         <p class="note">
           After submitting you'll be redirected to our website to explore more about our work.
@@ -53,5 +72,7 @@
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
